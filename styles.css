@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}

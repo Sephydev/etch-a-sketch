@@ -39,7 +39,8 @@ function createGrid() {
             row.appendChild(cell);
 
             cell.addEventListener('mouseenter', (e) => {
-                cell.classList.add('cellHovering');
+
+                cell.setAttribute('style', `background-color: rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`);
             })
         }
 
@@ -47,4 +48,9 @@ function createGrid() {
 
 
     }
+}
+
+function randomRGB() {
+    rdmRGB = Math.floor((Math.random() * 255) + 1);
+    return rdmRGB;
 }

@@ -9,3 +9,7 @@
     height: 50px;
     margin: 5px;
 }
+
+.cellHovering {
+    background-color: blue;
+}

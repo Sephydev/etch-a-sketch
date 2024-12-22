@@ -36,11 +36,16 @@ function createGrid() {
         for (let j = 0; j < size; j++) {
             let cell = document.createElement("div");
             cell.setAttribute('class', 'cell');
+            cell.setAttribute('style', 'opacity: 0.1;')
             row.appendChild(cell);
 
             cell.addEventListener('mouseenter', (e) => {
-
-                cell.setAttribute('style', `background-color: rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`);
+                let opacity = +cell.style.opacity + 0.1
+                console.log(opacity);
+                cell.setAttribute('style', `
+                    background-color: rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()});
+                    opacity: ${opacity};
+                    `);
             })
         }
 

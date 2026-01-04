@@ -16,6 +16,7 @@ function displayGrid (size) {
 
       square.style.width = `${squareSize}px`;
       square.style.height = `${squareSize}px`;
+      square.style.opacity = '0.1';
 
       row.appendChild(square);
     }
@@ -34,7 +35,10 @@ function hoverSquare () {
   
   squares.forEach(square => {
     square.addEventListener("mouseenter", () => {
+      const squareOpacity = Number(window.getComputedStyle(square).getPropertyValue("opacity"));
+
       square.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+      square.style.opacity = `${squareOpacity === 1 ? squareOpacity : squareOpacity + 0.1}`;
     })
   })
 }

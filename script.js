@@ -24,13 +24,17 @@ function displayGrid (size) {
 
   }
 }
+function randomRGB() {
+  const randNum = Math.floor(Math.random() * 255) + 1;
+  return randNum;
+}
 
 function hoverSquare () {
   const squares = document.querySelectorAll(".square");
   
   squares.forEach(square => {
     square.addEventListener("mouseenter", () => {
-      square.classList.add("hover");
+      square.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
     })
   })
 }

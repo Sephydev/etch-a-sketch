@@ -1,4 +1,4 @@
-# Rock Paper Scissors
+# Etch a Sketch
 
 This project is part of the The Odin Project curriculum.
 It consist of using what we learned during the Javascript sections of the Foundation module to make a mix of a sketchpad and an Etch a Sketch.

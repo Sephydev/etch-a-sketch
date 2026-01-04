@@ -11,3 +11,11 @@ for (i = 0; i < (16); i++) {
   }
   container.appendChild(row)
 }
+
+const squares = document.querySelectorAll(".square");
+
+squares.forEach(square => {
+  square.addEventListener("mouseenter", () => {
+    square.classList.add("hover");
+  })
+})
